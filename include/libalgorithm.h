@@ -6,7 +6,7 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 14:06:36 by ciglesia          #+#    #+#             */
-/*   Updated: 2021/07/01 17:36:52 by ciglesia         ###   ########.fr       */
+/*   Updated: 2021/07/01 18:32:21 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ unsigned long	djb2(unsigned char *key);
 /*
 **	mapping
 */
+
+t_map			new_map(void);
 
 /*
 **	trie
