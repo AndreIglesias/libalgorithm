@@ -6,7 +6,7 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 17:51:36 by ciglesia          #+#    #+#             */
-/*   Updated: 2021/06/30 17:59:48 by ciglesia         ###   ########.fr       */
+/*   Updated: 2021/07/01 17:15:03 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,14 @@ void	insert_trie(t_trie **root, char *cmd, int eq)
 		temp->value = ft_strdup(&cmd[eq + 1]);
 	else
 		temp->value = ft_strdup("");
+}
+
+void	insert_trie_pair(t_trie **root, char *key, char *value)
+{
+	char	*cmd;
+
+	cmd = ft_strjoin(key, "=");
+	cmd = ft_fstrjoin(cmd, value);
+	insert_trie(root, cmd, ft_strlen(key));
+	free(cmd);
 }

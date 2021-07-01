@@ -6,7 +6,7 @@
 #    By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/20 22:37:03 by ciglesia          #+#    #+#              #
-#    Updated: 2021/07/01 14:46:45 by ciglesia         ###   ########.fr        #
+#    Updated: 2021/07/01 17:03:16 by ciglesia         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -22,14 +22,16 @@ INCLUDE		=	-I $(INC) -I $(ROOTINC)
 
 DIRSRC		=	./src/
 DIRHASH		=	$(DIRSRC)/hash/
-DIRTRIE		=	$(DIRSRC)/mapping/trie/
+DIRMAP		=	$(DIRSRC)/mapping/
+DIRTRIE		=	$(DIRMAP)/trie/
 
 #***************** SRC ********************#
 
 HASH		=	djb2.c k24.c
+MAPPING		=	map.c
 TRIE		=	delete_trie.c free_trie.c get_trie.c insert_trie.c new_trie.c put_trie.c
 
-SRCS		=	$(HASH) $(TRIE)
+SRCS		=	$(HASH) $(MAPPING) $(TRIE)
 
 #***************** DEPS *******************#
 
@@ -64,6 +66,10 @@ E0M			=	 "\e[0m"
 #************************ DEPS COMPILATION *************************
 
 %.o		:		../$(DIRHASH)/%.c
+				@printf $(GREEN)"Generating libalgorithm objects...  %-33.33s\r" $@
+				@$(CC) $(CFLAGS) $(INCLUDE) -MMD -o $@ -c $<
+
+%.o		:		../$(DIRMAP)/%.c
 				@printf $(GREEN)"Generating libalgorithm objects...  %-33.33s\r" $@
 				@$(CC) $(CFLAGS) $(INCLUDE) -MMD -o $@ -c $<
 
