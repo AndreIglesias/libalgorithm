@@ -6,7 +6,7 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 14:06:36 by ciglesia          #+#    #+#             */
-/*   Updated: 2021/07/01 18:32:21 by ciglesia         ###   ########.fr       */
+/*   Updated: 2021/07/02 15:34:25 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "libtypes.h"
 
 # define KEY_SIZE 200
+# define K24 16777213
 
 typedef struct s_map
 {
@@ -31,6 +32,7 @@ typedef struct s_map
 */
 
 unsigned long	djb2(unsigned char *key);
+unsigned int	k24(const char *key);
 
 /*
 **	mapping
