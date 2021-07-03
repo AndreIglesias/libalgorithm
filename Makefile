@@ -6,7 +6,7 @@
 #    By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/20 22:37:03 by ciglesia          #+#    #+#              #
-#    Updated: 2021/07/01 17:03:16 by ciglesia         ###   ########.fr        #
+#    Updated: 2021/07/03 23:55:47 by ciglesia         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -21,17 +21,19 @@ INCLUDE		=	-I $(INC) -I $(ROOTINC)
 #***************** DIR ********************#
 
 DIRSRC		=	./src/
+DIRSRT		=	$(DIRSRC)/sorting/
 DIRHASH		=	$(DIRSRC)/hash/
 DIRMAP		=	$(DIRSRC)/mapping/
 DIRTRIE		=	$(DIRMAP)/trie/
 
 #***************** SRC ********************#
 
+SORT		=	strquick.c
 HASH		=	djb2.c k24.c
 MAPPING		=	map.c
 TRIE		=	delete_trie.c free_trie.c get_trie.c insert_trie.c new_trie.c put_trie.c
 
-SRCS		=	$(HASH) $(MAPPING) $(TRIE)
+SRCS		=	$(HASH) $(MAPPING) $(TRIE) $(SORT)
 
 #***************** DEPS *******************#
 
@@ -64,6 +66,10 @@ YELLOW		=	 "\e[33m"
 E0M			=	 "\e[0m"
 
 #************************ DEPS COMPILATION *************************
+
+%.o		:		../$(DIRSRT)/%.c
+				@printf $(GREEN)"Generating libalgorithm objects...  %-33.33s\r" $@
+				@$(CC) $(CFLAGS) $(INCLUDE) -MMD -o $@ -c $<
 
 %.o		:		../$(DIRHASH)/%.c
 				@printf $(GREEN)"Generating libalgorithm objects...  %-33.33s\r" $@

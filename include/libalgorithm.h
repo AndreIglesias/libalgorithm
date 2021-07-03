@@ -6,7 +6,7 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 14:06:36 by ciglesia          #+#    #+#             */
-/*   Updated: 2021/07/02 15:34:25 by ciglesia         ###   ########.fr       */
+/*   Updated: 2021/07/03 21:10:00 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ typedef struct s_map
 	char				*(*get)(struct s_map *, char *);
 	void				(*destructor)(struct s_map *);
 }	t_map;
+
+/*
+**	sorting
+*/
+
+void			strquick(char **list, size_t size, int f(char *, char *));
 
 /*
 **	hash
