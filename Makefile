@@ -6,7 +6,7 @@
 #    By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/20 22:37:03 by ciglesia          #+#    #+#              #
-#    Updated: 2021/07/03 23:55:47 by ciglesia         ###   ########.fr        #
+#    Updated: 2021/07/06 20:13:15 by ciglesia         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -28,7 +28,7 @@ DIRTRIE		=	$(DIRMAP)/trie/
 
 #***************** SRC ********************#
 
-SORT		=	strquick.c
+SORT		=	strquick.c binsert.c binsearch.c
 HASH		=	djb2.c k24.c
 MAPPING		=	map.c
 TRIE		=	delete_trie.c free_trie.c get_trie.c insert_trie.c new_trie.c put_trie.c

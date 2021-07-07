@@ -6,7 +6,7 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 14:06:36 by ciglesia          #+#    #+#             */
-/*   Updated: 2021/07/03 21:10:00 by ciglesia         ###   ########.fr       */
+/*   Updated: 2021/07/07 14:43:42 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ typedef struct s_map
 */
 
 void			strquick(char **list, size_t size, int f(char *, char *));
-
+void			binsert(char list[][256], char *str, size_t size,
+					int f(char *, char *));
+int				binsearch(char array[][256], t_sizes sizes, char *key,
+					int f(char *, char *));
 /*
 **	hash
 */
