@@ -6,7 +6,7 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 19:41:44 by ciglesia          #+#    #+#             */
-/*   Updated: 2021/07/08 00:26:17 by ciglesia         ###   ########.fr       */
+/*   Updated: 2021/07/08 00:29:07 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	binsearch(char array[][256], t_sizes sizes, char *key, int f(char *, char *)
 
 	start = sizes.s1;
 	end = sizes.s2;
-	if (end < 0 || start < 0)
+	if ((long)end < 0 || (long)start < 0)
 		return (0);
 	mid = 0;
 	while (start <= end && 0 <= (long)mid)
