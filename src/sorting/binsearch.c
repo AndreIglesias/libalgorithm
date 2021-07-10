@@ -6,13 +6,14 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 19:41:44 by ciglesia          #+#    #+#             */
-/*   Updated: 2021/07/08 00:29:07 by ciglesia         ###   ########.fr       */
+/*   Updated: 2021/07/11 00:32:51 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libalgorithm.h"
 
-int	binsearch(char array[][256], t_sizes sizes, char *key, int f(char *, char *))
+int	binsearch(char array[][256], t_sizes sizes, char *key,
+									int f(char *, char *))
 {
 	size_t	start;
 	size_t	end;
@@ -34,7 +35,7 @@ int	binsearch(char array[][256], t_sizes sizes, char *key, int f(char *, char *)
 				start = mid + 1;
 		}
 		else
-			break;
+			break ;
 	}
 	return (start);
 }
