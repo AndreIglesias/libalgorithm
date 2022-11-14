@@ -6,7 +6,7 @@
 #    By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/20 22:37:03 by ciglesia          #+#    #+#              #
-#    Updated: 2021/07/06 20:13:15 by ciglesia         ###   ########.fr        #
+#    Updated: 2022/11/14 14:14:57 by ciglesia         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -54,7 +54,7 @@ else
 CFLAGS		=	-Wall -Wextra -Werror -fPIC
 endif
 
-CC			=	/usr/bin/gcc
+CC			=	/usr/bin/clang
 RM			=	/bin/rm -f
 ECHO		=	/bin/echo -e
 BOLD		=	"\e[1m"
